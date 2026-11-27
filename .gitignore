@@ -1,0 +1,13 @@
+# Terraform local state & cache
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Environment variables & secrets (Use terraform.tfvars.example for shared templates)
+terraform.tfvars
+*.tfvars
+
+# Backup & Plan files
+*.tfplan
+*.backup

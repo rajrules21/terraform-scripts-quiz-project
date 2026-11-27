@@ -1,0 +1,9 @@
+variable "ecs_cloudwatch_log_group" { type = string }
+variable "codebuild_cloudwatch_log_group" { type = string }
+variable "ecs_memory_utilization" { type = string }
+variable "ecs_cpu_utilization" { type = string }
+variable "ecs_network_utilization" { type = string }
+variable "ecs_cluster_name" { type = string }
+variable "sns_topic_arn" { type = string }
+variable "cloudwatch_dashboard_name" { type = string }
+variable "aws_default_region" { type = string }

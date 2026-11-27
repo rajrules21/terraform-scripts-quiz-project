@@ -1,0 +1,59 @@
+# Example Terraform Variable Values (Copy to terraform.tfvars and fill in your values)
+
+bucket_name = "quiz-app-bucket-example"
+
+# Networking
+vpc_cidr_block             = "10.0.0.0/16"
+subnet_1_cidr_block        = "10.0.1.0/24"
+subnet_2_cidr_block        = "10.0.2.0/24"
+subnet_1_availability_zone = "ap-south-1a"
+subnet_2_availability_zone = "ap-south-1b"
+
+# Security Groups
+alb_security_group_name = "alb-sg"
+ecs_security_group_name = "ecs-sg"
+
+# AWS Account Configuration (Replace with your 12-digit AWS Account ID)
+aws_account_id     = "123456789012"
+aws_default_region = "ap-south-1"
+
+# ECR & CI/CD
+ecr_repo_name                           = "quiz-app-project"
+github_repo_name                        = "rajrules21/python-flask-quiz-app"
+codebuild_project_name                  = "codebuild-quiz-app"
+codepipeline_pipeline_name              = "quiz-app-pipeline"
+aws_codestarconnections_connection_name = "github-connection"
+aws_codestar_provider_type              = "GitHub"
+
+# IAM Roles & Policies
+codebuild_role_name                    = "quizapp-codebuild-role"
+codebuild_policy_name                  = "quizapp-codebuild-policy"
+codebuild_policy_attachment_name       = "quizapp-codebuild-attachment"
+codepipeline_role_name                 = "quizapp-codepipeline-role"
+codepipeline_policy_name               = "quizapp-codepipeline-policy"
+codepipeline_policy_attachment_name    = "quizapp-codepipeline-attachment"
+ecs_quiz_app_task_execution_role_name  = "ecs-fargate-execution-role"
+
+# CloudWatch & Monitoring
+ecs_cloudwatch_log_group       = "/ecs/quiz-app-container"
+ecs_cloudwatch_log_stream      = "ecs-quiz-app-lg"
+codebuild_cloudwatch_log_group = "/codebuild/quiz-app"
+codebuild-log-stream           = "quiz-appcodebuild-log-stream"
+cloudwatch_dashboard_name      = "quiz-app-ecs-dashboard"
+
+# ECS Cluster & Services
+ecs_cluster_name         = "quiz_app_cluster"
+ecs_task_definition_name = "quiz_app_task_definition"
+launch_type              = "FARGATE"
+image_tag                = "latest"
+ecs_service_name         = "quiz_app_svc"
+ecs_load_balancer        = "quiz-app-alb"
+ecs_target_group         = "quiz-app-ecs-tg"
+
+# Alarms & Notifications
+ecs_memory_utilization         = "ECS-MEMORY-UTILIZATION"
+ecs_cpu_utilization            = "ECS-CPU-UTILIZATION"
+ecs_network_utilization        = "ECS-NETWORK-UTILIZATION"
+sns_topic_name                 = "quiz_app_topic"
+codepipeline_notification_rule = "quiz_app_codepipeline_notification_rule"
+notification_email             = ""

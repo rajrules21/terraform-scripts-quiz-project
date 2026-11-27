@@ -1,0 +1,14 @@
+variable "ecs_cluster_name" { type = string }
+variable "ecs_task_definition_name" { type = string }
+variable "ecs_service_name" { type = string }
+variable "launch_type" { type = string }
+variable "image_tag" { type = string }
+variable "ecr_repo_name" { type = string }
+variable "ecr_repository_url" { type = string }
+variable "execution_role_arn" { type = string }
+variable "log_group_name" { type = string }
+variable "aws_default_region" { type = string }
+variable "ecs_cloudwatch_log_stream" { type = string }
+variable "subnet_ids" { type = list(string) }
+variable "ecs_security_group_id" { type = string }
+variable "target_group_arn" { type = string }
